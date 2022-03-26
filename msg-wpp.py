@@ -3,15 +3,17 @@ from re import search
 import pyautogui, webbrowser
 from time import sleep
 
-webbrowser.open('https://web.whatsapp.com/')
+def msgWpp():
+    sleep(50)
+    pyautogui.press("tab") 
+    pyautogui.typewrite("mas que una familia vmkg")
+    pyautogui.press("enter") 
+    for i in range(13):
+        pyautogui.press("tab")
+        continue
+    pyautogui.typewrite("Buenas tardes!!. Que vamos a comer hoy?. Red Market cierra a las 21:00 y el Super de Roberto a las 21:30!")
+    pyautogui.press("enter")
 
-sleep(30)
 
-pyautogui.press("tab") 
-pyautogui.typewrite("just me")
-pyautogui.press("enter") 
-for i in range(12):
-    pyautogui.press("tab")
-    continue
-pyautogui.typewrite("Mensaje programado")
-pyautogui.press("enter")
+webbrowser.open('https://web.whatsapp.com')
+msgWpp()

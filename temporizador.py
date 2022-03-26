@@ -2,6 +2,8 @@ from datetime import datetime, timedelta
 from threading import Thread
 from time import sleep
 
+
+
 class Temporizador(Thread):
     def __init__(self, hora, delay, funcion):
         # El constructor recibe como parámetros:
@@ -20,16 +22,16 @@ class Temporizador(Thread):
 
     def run(self):
         # Pasamos el string a dato tipo datetime
-        aux = datetime.strptime(self.hora, '%H:%M:%S')
+        hora = datetime.strptime(self.hora, '%H:%M:%S')
         # Obtenemos la fecha y hora actuales.
         hora = datetime.now()
         # Sustituimos la hora por la hora a ejecutar la función.
-        hora = hora.replace(hour = 6, minute=45, second=0, microsecond = 0)
+        hora = hora.replace(hour = 21, minute = 48, second = 0, microsecond = 0)
         # Comprobamos si la hora ya a pasado o no, si ha pasado sumamos un dia (hoy ya no se ejecutará).
         if hora <= datetime.now():
             hora += timedelta(days=1)
         print('Ejecución automática iniciada')
-        exec(open("msg-wpp.py").read())
+        # exec(open("msg-wpp.py").read())
         print('Proxima ejecución programada el {0} a las {1}'.format(hora.date(),  hora.time()))
 
         # Iniciamos el ciclo:
