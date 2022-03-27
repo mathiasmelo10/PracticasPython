@@ -6,12 +6,12 @@ from time import sleep
 def msgWpp():
     sleep(50)
     pyautogui.press("tab") 
-    pyautogui.typewrite("mas que una familia vmkg")
+    pyautogui.typewrite("just me") # Ingreso de nombre del contacto o grupo 
     pyautogui.press("enter") 
     for i in range(13):
         pyautogui.press("tab")
         continue
-    pyautogui.typewrite("Buenas tardes!!. Que vamos a comer hoy?. Red Market cierra a las 21:00 y el Super de Roberto a las 21:30!")
+    pyautogui.typewrite("Buenas tardes!!. Recibistes un mensaje programado en Python de Mathi :) ")
     pyautogui.press("enter")
 
 
